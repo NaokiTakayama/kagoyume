@@ -15,12 +15,11 @@
         <h1>マイページ</h1>
         <h2>--ようこそ<%= ((UserDataDTO)session.getAttribute("loginData")).getName()%>さん！--</h2>
             <ul>
-                <li>名前:<%= login_udd.getName()%></li><br>
-                <li>パスワード:<%= login_udd.getPassword()%></li><br>
-                <li>E-mail:<%= login_udd.getMail()%></li><br>
-                <li>住所:<%= login_udd.getAddress()%></li><br>
-                <li>総購入金額:<%= login_udd.getTotal()%></li><br>
-                <li>登録日時:<%= login_udd.getNewDate()%></li><br>
+                <li><strong>名前:</strong><%= login_udd.getName()%></li><br>
+                <li><strong>E-mail:</strong><%= login_udd.getMail()%></li><br>
+                <li><strong>住所:</strong><%= login_udd.getAddress()%></li><br>
+                <li><strong>総購入金額:</strong><%= login_udd.getTotal()%></li><br>
+                <li><strong>登録日時:</strong><%= login_udd.getNewDate()%></li><br>
             </ul>
             <form action="MyHistory" method="GET">
               <input type="hidden" name="ac"  value="<%= session.getAttribute("ac")%>">

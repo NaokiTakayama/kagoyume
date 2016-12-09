@@ -22,11 +22,7 @@
     </head>
     <body>
         <h1>新規登録画面</h1>
-        <%if(equal_pass){%>
-        <p><font color="#ff0000"><strong>入力されたパスワードは使用できません</strong></font></p>
-        <%;}%>
-        
-        <%if(notMatch){%>
+        <%if(equal_pass || notMatch){%>
         <p><font color="#ff0000"><strong>入力されたパスワードは使用できません</strong></font></p>
         <%;}%>
         
@@ -34,23 +30,23 @@
         <p><font color="#ff0000"><strong>入力されたパスワードが一致しません</strong></font></p>
         <%;}%>
     <form action="RegistrationConfirm" method="POST">
-        名前:
+        <strong>名前:</strong>
         <input type="text" name="name" value="<% if(reinput || equal_pass || notMatch || notMatch_2){out.print(regist_ud.getName());}%>">
         <br><br>
 
-        パスワード（半角英数字　６文字以上（１文字目に数字、アンダーバーは不可））:<br>
+        <strong>パスワード（半角英数字　６文字以上（１文字目に数字、アンダーバーは不可））:</strong><br>
         &emsp;<input type="password" name="password">
         <br><br>
         
-        念のため、もう一度パスワードを入力して下さい:<br>
+        <strong>確認のため、もう一度パスワードを入力して下さい:</strong><br>
         &emsp;<input type="password" name="password_2">
         <br><br>
         
-        E-mail:
+        <strong>E-mail:</strong>
         <input type="text" name="mail" value="<% if(reinput || equal_pass || notMatch || notMatch_2){out.print(regist_ud.getMail());}%>">
         <br><br>
         
-        県名:　
+        <strong>県名:</strong>　
         <select name="prefecture">
             <option value="">----</option>
             <% for(int i=0; i<47; i++){ %>
@@ -60,15 +56,15 @@
         </select>
         <br><br>
 
-        市区町村名:
+        <strong>市区町村名:</strong>
         <input type="text" name="city" value="<% if(reinput || equal_pass || notMatch || notMatch_2){out.print(regist_ud.getCity());}%>">
         <br><br>
         
-        番地:
+        <strong>番地:</strong>
         <input type="text" name="street_number" value="<% if(reinput || equal_pass || notMatch || notMatch_2){out.print(regist_ud.getStreetNumber());}%>">
         <br><br>
         
-        建物名など:
+        <strong>建物名など:</strong>
         <input type="text" name="building" value="<% if(reinput || equal_pass || notMatch || notMatch_2){out.print(regist_ud.getBuilding());}%>">
         <br><br>
         

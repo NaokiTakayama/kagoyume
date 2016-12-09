@@ -17,11 +17,11 @@
         <h2>--ようこそ<%= ((UserDataDTO)session.getAttribute("loginData")).getName()%>さん！--</h2>
         以下の内容を削除しますか？<br>
             <ul>
-                <li>名前:<%= login_udd.getName()%></li><br>
-                <li>E-mail:<%= login_udd.getMail()%></li><br>
-                <li>住所:<%= login_udd.getAddress()%></li><br>
-                <li>総購入金額:<%= login_udd.getTotal()%></li><br>
-                <li>登録日時:<%= login_udd.getNewDate()%></li><br>
+                <li><strong>名前:</strong><%= login_udd.getName()%></li><br>
+                <li><strong>E-mail:</strong><%= login_udd.getMail()%></li><br>
+                <li><strong>住所:</strong><%= login_udd.getAddress()%></li><br>
+                <li><strong>総購入金額:</strong><%= login_udd.getTotal()%></li><br>
+                <li><strong>登録日時:</strong><%= login_udd.getNewDate()%></li><br>
             </ul>
         <div style="display:inline-flex">
         <form action="MyDeleteResult" method="GET">

@@ -14,12 +14,12 @@
         <h1>登録完了画面</h1>
         <p>登録が完了しました</p>
         <ul>
-            <li>名前:<%= regist_ud.getName()%></li><br>
-            <li>E-mail:<%= regist_ud.getMail()%></li><br>
-            <li>県名:<%= regist_ud.getPrefecture()%></li><br>
-            <li>市町村名:<%= regist_ud.getCity()%></li><br>
-            <li>番地:<%= regist_ud.getStreetNumber()%></li><br>
-            <li>建物など:<%= regist_ud.getBuilding()%></li><br><br>
+            <li><strong>名前:</strong><%= regist_ud.getName()%></li><br>
+            <li><strong>E-mail:</strong><%= regist_ud.getMail()%></li><br>
+            <li><strong>県名:</strong><%= regist_ud.getPrefecture()%></li><br>
+            <li><strong>市町村名:</strong><%= regist_ud.getCity()%></li><br>
+            <li><strong>番地:</strong><%= regist_ud.getStreetNumber()%></li><br>
+            <li><strong>建物など:</strong><%= regist_ud.getBuilding()%></li><br><br>
         </ul>
         <p>以上の内容で登録しました</p>
         <br>

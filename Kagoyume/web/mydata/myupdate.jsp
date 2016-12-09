@@ -44,18 +44,19 @@
     <%;}%>
     
     <form action="MyUpdateResult" method="POST">
-        名前:
+        <strong>名前:</strong>
         <input type="text" name="name" value="<%= ud.getName()%>">
         <br><br>
-        パスワード:
+        
+        <strong>パスワード:</strong>
         <input type="text" name="password" value="<%= ud.getPassword()%>">
         <br><br>
         
-        E-mail:
+        <strong>E-mail:</strong>
         <input type="text" name="mail" value="<%= ud.getMail()%>">
         <br><br>
         
-        県名:　
+        <strong>県名:</strong>　
         <select name="prefecture">
             <option value="">----</option>
             <% for(int i=0; i<47; i++){ %>
@@ -65,15 +66,15 @@
         </select>
         <br><br>
 
-        市区町村名:
+        <strong>市区町村名:</strong>
         <input type="text" name="city" value="<%= ud.getCity()%>">
         <br><br>
         
-        番地:
+        <strong>番地:</strong>
         <input type="text" name="street_number" value="<%= ud.getStreetNumber()%>">
         <br><br>
         
-        建物名など:
+        <strong>建物名など:</strong>
         <input type="text" name="building" value="<%= ud.getBuilding()%>">
         <br><br>
         

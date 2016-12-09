@@ -95,17 +95,7 @@ if(empty_chk){
       out.write("                <input type=\"submit\" name=\"btnSubmit\" value=\"検索\">\n");
       out.write("            </form>\n");
       out.write("                <br><br>\n");
-      out.write("                \n");
-      out.write("                <p>本日は「かごいっぱいのゆめ」にお越しいただきありがとうございます。</p>\n");
-      out.write("                <p>このサイトでは、疑似的なネットショッピングをお楽しみいただけます。</p><br>\n");
-      out.write("                \n");
-      out.write("                <p>まずは、上の検索フォームに購入したい商品のキーワードを入力して下さい。</p>\n");
-      out.write("                <p>関連商品が一覧となって表示されます。</p><br>\n");
-      out.write("                \n");
-      out.write("                <p>また、本サイトに登録していただけますと、実際に商品を購入（実際には購入できませんが・・・）<br>\n");
-      out.write("                することが出来ます。</p>\n");
-      out.write("                <p>ぜひ登録してお楽しみください。</p><br><br>\n");
-      out.write("                ");
+      out.write("            ");
 if(login_chk){
       out.write("\n");
       out.write("                    <a href=\"Cart?backPage=top&ac=");
@@ -131,7 +121,16 @@ if(login_chk){
       out.write("\">ログアウト</a><br><br>\n");
       out.write("                ");
 ;}
-      out.write("\n");
+      out.write("    \n");
+      out.write("                <p>本日は「かごいっぱいのゆめ」にお越しいただきありがとうございます。</p>\n");
+      out.write("                <p>このサイトでは、疑似的なネットショッピングをお楽しみいただけます。</p><br>\n");
+      out.write("                \n");
+      out.write("                <p>まずは、上の検索フォームに購入したい商品のキーワードを入力して下さい。</p>\n");
+      out.write("                <p>関連商品が一覧となって表示されます。</p><br>\n");
+      out.write("                \n");
+      out.write("                <p>また、本サイトに登録していただけますと、実際に商品を購入（実際には購入できませんが・・・）<br>\n");
+      out.write("                することが出来ます。</p>\n");
+      out.write("                <p>ぜひ登録してお楽しみください。</p><br><br>\n");
       out.write("        </body>\n");
       out.write("    </html>\n");
       out.write("\n");

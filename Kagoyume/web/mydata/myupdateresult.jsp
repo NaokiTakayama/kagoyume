@@ -18,16 +18,18 @@
         <h2>--ようこそ<%= ((UserDataDTO)session.getAttribute("loginData")).getName()%>さん！--</h2>
         
         以下の内容に変更しました<br>
-        名前:<%= update_ud.getName()%><br>
-        パスワード:<%= update_ud.getPassword()%><br>
-        E-mail:<%= update_ud.getMail()%><br>
-        県名:<%= update_ud.getPrefecture()%><br>
-        市町村名:<%= update_ud.getCity()%><br>
-        番地:<%= update_ud.getStreetNumber()%><br>
-        建物など:<%= update_ud.getBuilding()%><br><br>
+        <ul>
+            <li><strong>名前:</strong><%= update_ud.getName()%></li><br>
+            <li><strong>パスワード:</strong><%= update_ud.getPassword()%></li><br>
+            <li><strong>E-mail:</strong><%= update_ud.getMail()%></li><br>
+            <li><strong>県名:</strong><%= update_ud.getPrefecture()%></li><br>
+            <li><strong>市町村名:</strong><%= update_ud.getCity()%></li><br>
+            <li><strong>番地:</strong><%= update_ud.getStreetNumber()%></li><br>
+            <li><strong>建物など:</strong><%= update_ud.getBuilding()%></li><br><br>
+        </ul>
         <a href="mydata/myupdate.jsp?ac=<%= session.getAttribute("ac")%>">変更画面に移動</a><br><br>
         <a href="mydata/mydata.jsp?ac=<%= session.getAttribute("ac")%>">マイページに移動</a><br><br>
-        <a href="Cart?backPage=mydata/myupdateresult&ac=<%= session.getAttribute("ac")%>">カートに移動</a><br>
+        <a href="Cart?backPage=mydata/myupdateresult&ac=<%= session.getAttribute("ac")%>">カートに移動</a><br><br>
         <%=kgymHelper.getInstance().home()%>
     </body>
 </html>

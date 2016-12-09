@@ -21,8 +21,8 @@
         <%;}%>
         <form action="LoginProcess" method="POST">
             <ul>    
-                <li>ユーザ名 &nbsp;：<input type="text" name="name" value=""><br><br></li>
-                <li>パスワード &nbsp;（半角）：<input type="password" name="password" value=""><br><br></li>
+                <li><strong>ユーザ名</strong> &nbsp;：<input type="text" name="name" value=""><br><br></li>
+                <li><strong>パスワード</strong> &nbsp;（半角）：<input type="password" name="password" value=""><br><br></li>
                 <input type="hidden" name="ac"  value="<%= session.getAttribute("ac")%>">
                 <input type="submit" value="ログイン">
             </ul>

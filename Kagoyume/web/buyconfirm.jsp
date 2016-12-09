@@ -42,7 +42,7 @@
         </table>
         <br>
         <form action="BuyComplete" method="POST">
-            発送方法:
+            <strong>発送方法:</strong>
         <br>
             <% for(int i = 1; i<=3; i++){ %>
             <input type="radio" name="type" value="<%=i%>"><%=kg.exTypenum(i)%><br>

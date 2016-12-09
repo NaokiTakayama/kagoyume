@@ -28,7 +28,7 @@
                 <p>キーワードを入力して下さい</p>
                 
             <form action="Search" method="GET">
-                キーワード検索:
+                <strong>キーワード検索:</strong>
                 <input type="text" name="keyword" value="">
                 <br><br>
 
@@ -36,7 +36,15 @@
                 <input type="submit" name="btnSubmit" value="検索">
             </form>
                 <br><br>
-                
+            <%if(login_chk){%>
+                    <a href="Cart?backPage=top&ac=<%= session.getAttribute("ac")%>">カートに移動</a><br><br>
+                <%;}else{%>
+                    <a href="Login?backPage=top&ac=<%= session.getAttribute("ac")%>">ログイン</a><br><br>
+                    <a href="Registration?backPage=top&ac=<%= session.getAttribute("ac")%>">新規登録</a>
+                <%;}%>
+                <%if(login_chk){%>
+                <a href="Login?ac=<%= session.getAttribute("ac")%>">ログアウト</a><br><br>
+                <%;}%>    
                 <p>本日は「かごいっぱいのゆめ」にお越しいただきありがとうございます。</p>
                 <p>このサイトでは、疑似的なネットショッピングをお楽しみいただけます。</p><br>
                 
@@ -46,15 +54,6 @@
                 <p>また、本サイトに登録していただけますと、実際に商品を購入（実際には購入できませんが・・・）<br>
                 することが出来ます。</p>
                 <p>ぜひ登録してお楽しみください。</p><br><br>
-                <%if(login_chk){%>
-                    <a href="Cart?backPage=top&ac=<%= session.getAttribute("ac")%>">カートに移動</a><br><br>
-                <%;}else{%>
-                    <a href="Login?backPage=top&ac=<%= session.getAttribute("ac")%>">ログイン</a><br><br>
-                    <a href="Registration?backPage=top&ac=<%= session.getAttribute("ac")%>">新規登録</a>
-                <%;}%>
-                <%if(login_chk){%>
-                <a href="Login?ac=<%= session.getAttribute("ac")%>">ログアウト</a><br><br>
-                <%;}%>
         </body>
     </html>
 
